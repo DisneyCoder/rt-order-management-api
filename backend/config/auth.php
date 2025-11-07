@@ -37,7 +37,7 @@ return [
 
     'guards' => [
         'api' => [
-            'driver' => 'pasport',
+            'driver' => 'passport',
             'provider' => 'users',
         ],
     ],
