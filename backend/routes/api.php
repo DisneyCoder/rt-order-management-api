@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
-Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'login']);
 
+Route::get('/product/search',[ProductController::class,'search']);
