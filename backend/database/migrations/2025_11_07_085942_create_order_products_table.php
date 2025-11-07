@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->foreignId('order_id')->constrained()->onDelete('cascade');
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
             $table->foreignId('stock_id')->constrained()->onDelete('cascade');
+            $table->integer('quantity')->default(0);
             $table->decimal('sale_price', 10, 2);
             $table->decimal('sub_total', 10, 2);
             $table->decimal('profit', 5, 2); // percentage

@@ -13,7 +13,6 @@ return new class extends Migration {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('invoice_number')->unique();
-            $table->timestamp('date_time')->nullable();
             $table->decimal('total_amount', 10, 2);
             $table->string('customer_name');
             $table->enum('status', ['Pending', 'Processing', 'Delivered', 'Cancelled'])->default('Pending');
